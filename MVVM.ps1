@@ -10,16 +10,20 @@ Add-Type –assemblyName "WindowsBase"
 $reader=(New-Object System.Xml.XmlNodeReader $xaml)
 $Window=[Windows.Markup.XamlReader]::Load( $reader )
 
-$window.ToolTip = "This is a window. Cool, isn't it?"
+$window.ToolTip = "Leftclick to move! Rightclick to close!"
 $Window.Add_MouseRightButtonDown({
     $Window.close()
 })
 $Window.Add_MouseLeftButtonDown({
     $Window.DragMove()
 })
+
+
 $timer = $null
 $timerEvent = $null
+
 $Window.Add_Loaded({
+
     Write-Verbose "Starting up application"
 
     $timer = New-Object System.Windows.Threading.DispatcherTimer

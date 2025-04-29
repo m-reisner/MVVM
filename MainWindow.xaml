@@ -1,6 +1,11 @@
 <Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    x:Name="Window" Title="Initial Window" WindowStartupLocation = "CenterScreen" 
-    Width = "800" Height = "600" ShowInTaskbar = "True">
+    x:Name="Window" 
+    Title="Initial Window" 
+    WindowStartupLocation = "CenterScreen" 
+    Width = "800" Height = "600" 
+    ShowInTaskbar = "True" 
+    Topmost = "True"
+    FontFamily = "Segoe UI Variable">
 </Window>
